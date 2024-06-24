@@ -20,7 +20,6 @@
 }
 
 .projects.visible {
- 
   opacity: 1;
 }
 
@@ -85,4 +84,30 @@
 
 .projects.visible .project-card {
   animation: slideIn 0.5s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects h2 {
+    font-size: 2em;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-card p {
+    font-size: 0.9em;
+  }
 }

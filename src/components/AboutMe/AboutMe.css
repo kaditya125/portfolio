@@ -11,8 +11,9 @@
 
 .about-me-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 50px;
+  padding: 20px;
   background-color: #f0f0f0;
   min-height: 500px;
   opacity: 0;
@@ -26,33 +27,33 @@
 }
 
 .about-me-image {
-  flex: 1;
-  position: relative;
-  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
 }
 
 .about-me-image img {
   width: 100%;
-  max-width: 300px;
   border-radius: 8px;
   filter: grayscale(0);
-  transition: scale 750ms ease-out, filter 250ms ease-in-out;
+  transition: transform 750ms ease-out, filter 250ms ease-in-out;
   object-fit: cover;
 }
 
 .about-me-image img:hover {
-  scale: 1.10;
+  transform: scale(1.10);
   filter: grayscale(1);
 }
 
 .about-me-content {
-  flex: 2;
-  padding: 20px;
+  text-align: center;
   color: #333;
+  padding: 20px;
+  width: 100%;
 }
 
 .about-me-content h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 20px;
 }
 
@@ -66,6 +67,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
   margin-top: 8px;
 }
 
@@ -79,6 +81,7 @@
 
 .buttons {
   display: flex;
+  justify-content: center;
   gap: 10px;
   margin-top: 20px;
 }
@@ -96,4 +99,61 @@
 .download-cv:hover {
   background-color: #e6007e;
   color: #fff;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .about-me-container {
+    flex-direction: row;
+  }
+
+  .about-me-image {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .about-me-content {
+    flex: 2;
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-me-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-me-content p {
+    font-size: 0.9rem;
+  }
+
+  .about-me-content .skill {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .download-cv {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .about-me-content p {
+    font-size: 0.8rem;
+  }
+
+  .about-me-content .skill {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+
+  .download-cv {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
 }

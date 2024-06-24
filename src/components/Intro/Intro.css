@@ -1,3 +1,14 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .intro {
   height: calc(85vh - 4rem);
   width: 100vw;
@@ -6,7 +17,6 @@
   position: relative;
   z-index: 1;
   margin-top: 5rem;
-  
 }
 
 .bg {
@@ -15,11 +25,11 @@
   right: -5rem;
   z-index: -1;
   object-fit: cover;
-  width: 21rem; 
-  height: 21rem; 
+  width: 21rem;
+  height: 21rem;
   border-radius: 50%;
- 
 }
+
 .scrolling-text-container {
   position: absolute;
   bottom: 7rem;
@@ -54,7 +64,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 60%; 
+  max-width: 60%;
 }
 
 .hello {
@@ -69,11 +79,11 @@
   margin-bottom: 1rem;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 3s steps(40, end) infinite, blink-caret 0.75s step-end infinite ,  color-change 7s infinite;
+  animation: typing 3s steps(40, end) infinite, blink-caret 0.75s step-end infinite, color-change 7s infinite;
 }
 
 .introPara {
-  font-size:medium;
+  font-size: medium;
   letter-spacing: 1px;
   font-weight: 300;
 }
@@ -88,6 +98,7 @@
   border: none;
   font-weight: 500;
 }
+
 .btn:hover {
   background: rgb(227, 229, 230);
   color: black;
@@ -104,7 +115,7 @@
 }
 
 .scroll-symbol {
-  width: 2rem; 
+  width: 2rem;
   margin-top: 2rem;
   cursor: pointer;
   animation: bounce 2s infinite;
@@ -116,22 +127,18 @@
   top: 40%;
   transform: translateY(-50%);
   padding: 1rem;
- 
 }
 
 .contact-sidebar ul {
   list-style: none;
   margin: 0;
   padding: 0;
-
 }
 
 .contact-sidebar li {
   margin: 4.5rem 0;
   animation: flip 3s infinite linear;
 }
-
-
 
 @keyframes flip {
   0% {
@@ -146,12 +153,10 @@
   text-decoration: none;
   color: white;
   font-weight: 600;
-  display: inline-block; 
-  padding: 0.2rem 0.5rem; 
-  background-color: black; 
-  border-radius: 0.3rem; 
-
-  
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background-color: black;
+  border-radius: 0.3rem;
 }
 
 .contact-sidebar a:hover {
@@ -163,7 +168,8 @@
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -172,23 +178,38 @@
 }
 
 @keyframes typing {
-  0% { width: 0; }
-  50%, 100% { width: 100%; }
+  0% {
+    width: 0;
+  }
+  50%,
+  100% {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% {  }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {}
 }
 
 @keyframes color-change {
-  0% { color: black; }
-  50% { color: #c71959; }
-  100% { color: rgb(5, 51, 114); }
+  0% {
+    color: black;
+  }
+  50% {
+    color: #c71959;
+  }
+  100% {
+    color: rgb(5, 51, 114);
+  }
 }
 
 @keyframes scale {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -210,49 +231,51 @@
     border-color: black;
   }
 }
+
 @media screen and (max-width: 1080px) {
   .intro {
     margin-top: 7rem;
   }
   .bg {
-    right: 9vw; 
+    right: 9vw;
+  }
   .introContent {
     font-size: 8vw;
-    max-width: 80%; 
+    max-width: 80%;
   }
   .hello {
     font-size: 4vw;
   }
 }
-}
+
 @media screen and (max-width: 720px) {
   .intro {
-    margin-top: 10rem; 
+    margin-top: 10rem;
   }
   .bg {
-    right: 6vw; 
+    right: 6vw;
   }
   .introContent {
-    font-size: 10vw; 
-    max-width: 85%; 
+    font-size: 10vw;
+    max-width: 85%;
   }
   .hello {
-    font-size: 5vw; 
+    font-size: 5vw;
   }
 }
 
 @media screen and (max-width: 480px) {
   .intro {
-    margin-top: 12rem; 
+    margin-top: 12rem;
   }
   .bg {
-    right: 4vw; 
+    right: 4vw;
   }
   .introContent {
     font-size: 12vw;
     max-width: 90%;
   }
   .hello {
-    font-size: 6vw; 
+    font-size: 6vw;
   }
-}                                                 
+}
