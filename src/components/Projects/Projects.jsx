@@ -22,8 +22,9 @@ const projects = [
     title: "Weather",
     description: "Built a user-friendly weather app with HTML, CSS, and JavaScript. It shows current weather from OpenWeatherMap and allows searches by city . The app is responsive and handles errors smoothly",
     imageUrl: WeatherApp,
-    link: "https://github.com/Navya-1212/weatherApp"
+    link: "https://clouddash.netlify.app/"
   }
+ 
 ];
 
 const Projects = () => {
