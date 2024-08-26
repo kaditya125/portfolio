@@ -10,38 +10,75 @@
     font-size: 16px;
     padding: 0 1rem;
     position: relative;
-}
-
-.scroll-up-container {
+    text-align: center;
+  }
+  
+  .scroll-up-container {
     background: rgb(66, 63, 63);
     padding: 0.2rem;
-    position: fixed; /* Changed to fixed position to keep it visible while scrolling */
-    bottom: 16px; /* Adjust position as needed */
-    right: 16px; /* Adjust position as needed */
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    animation: scrollUpAnimation 1s ease infinite alternate; /* Infinite animation */
-}
-
-.scroll-up {
+    animation: scrollUpAnimation 1s ease infinite alternate;
+  }
+  
+  .scroll-up {
     filter: invert(1); /* Apply filter only to the image */
     width: 1.3rem;
     height: 1.3rem;
-    transition: opacity 0.3s ease; /* Add transition for smooth appearance */
-    opacity: 0.8; /* Initial opacity */
-}
-
-.scroll-up:hover {
-    opacity: 1; /* Increase opacity on hover */
-}
-
-@keyframes scrollUpAnimation {
+    transition: opacity 0.3s ease;
+    opacity: 0.8;
+  }
+  
+  .scroll-up:hover {
+    opacity: 1;
+  }
+  
+  @keyframes scrollUpAnimation {
     from {
-        transform: translateY(0);
+      transform: translateY(0);
     }
     to {
-        transform: translateY(-5px);
+      transform: translateY(-5px);
     }
-}
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .footer {
+      height: 3.5rem;
+      font-size: 14px;
+    }
+  
+    .scroll-up-container {
+      bottom: 12px;
+      right: 12px;
+    }
+  
+    .scroll-up {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      height: 3rem;
+      font-size: 12px;
+    }
+  
+    .scroll-up-container {
+      bottom: 10px;
+      right: 10px;
+    }
+  
+    .scroll-up {
+      width: 0.9rem;
+      height: 0.9rem;
+    }
+  }
+  

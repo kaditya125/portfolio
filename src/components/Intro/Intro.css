@@ -17,6 +17,11 @@
   position: relative;
   z-index: 1;
   margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .bg {
@@ -30,47 +35,16 @@
   border-radius: 50%;
 }
 
-.scrolling-text-container {
-  position: absolute;
-  bottom: 7rem;
-  left: 50%;
-  transform: translateX(30%);
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.scrolling-text {
-  display: inline-block;
-  padding-left: 100%;
-  animation: scrolling 10s linear infinite;
-}
-
-@keyframes scrolling {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
-
 .introContent {
-  height: 100vh;
-  width: 100%;
+  max-width: 90%;
   padding: 2rem;
-  font-size: 3rem;
-  font-weight: 500;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 60%;
+  text-align: center;
 }
 
 .hello {
-  font-size: 3.85rem;
+  font-size: 3rem;
   font-weight: 900;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .introtext {
@@ -81,46 +55,7 @@
   overflow: hidden;
   animation: typing 3s steps(40, end) infinite, blink-caret 0.75s step-end infinite, color-change 7s infinite;
 }
-
-.introPara {
-  font-size: medium;
-  letter-spacing: 1px;
-  font-weight: 300;
-}
-
-.btn {
-  background: black;
-  color: white;
-  margin: 1rem 0;
-  padding: 0.75rem 2rem;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  border: none;
-  font-weight: 500;
-}
-
-.btn:hover {
-  background: rgb(227, 229, 230);
-  color: black;
-}
-
-.scroll-symbol-container {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.scroll-symbol {
-  width: 2rem;
-  margin-top: 2rem;
-  cursor: pointer;
-  animation: bounce 2s infinite;
-}
-
+/* Typing effect */
 .contact-sidebar {
   position: absolute;
   left: -6rem;
@@ -232,50 +167,307 @@
   }
 }
 
-@media screen and (max-width: 1080px) {
-  .intro {
-    margin-top: 7rem;
+
+.introPara {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.btn {
+  background: black;
+  color: white;
+  margin: 1rem 0;
+  padding: 0.75rem 2rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background: rgb(227, 229, 230);
+  color: black;
+}
+
+.scrolling-text-container {
+  position: absolute;
+  bottom: 7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scrolling-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrolling 10s linear infinite;
+}
+
+@keyframes scrolling {
+  from {
+    transform: translateX(-100%);
   }
-  .bg {
-    right: 9vw;
-  }
-  .introContent {
-    font-size: 8vw;
-    max-width: 80%;
-  }
-  .hello {
-    font-size: 4vw;
+  to {
+    transform: translateX(0%);
   }
 }
 
-@media screen and (max-width: 720px) {
+.scroll-symbol-container {
+  position: absolute;
+  bottom: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-symbol {
+  width: 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.contact-sidebar {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  transform: translateY(-50%);
+  padding: 1rem;
+}
+
+.contact-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-sidebar li {
+  margin: 1.5rem 0;
+}
+
+.contact-sidebar a {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  font-size: 2rem;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media screen and (max-width: 1080px) {
   .intro {
-    margin-top: 10rem;
+    height: auto;
+    margin-top: 5rem;
   }
+
   .bg {
-    right: 6vw;
+    width: 18rem;
+    height: 18rem;
+    right: 2rem;
   }
+
   .introContent {
-    font-size: 10vw;
-    max-width: 85%;
+    font-size: 2.5rem;
   }
+
   .hello {
-    font-size: 5vw;
+    font-size: 3rem;
+  }
+
+  .scroll-symbol {
+    width: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    margin-top: 8rem;
+    height: auto;
+  }
+
+  .bg {
+    margin-top: 2rem;
+    top: -10rem;
+    right: 11rem;
+    width: 16rem;
+    height: 16rem;
+}
+
+  .introContent {
+    margin-top: 6rem;
+    font-size: 1.5rem;
+    max-width: 90%;
+  }
+
+  .hello {
+    font-size: 2.5rem;
+  }
+
+  .introtext {
+    font-size: 1.8rem;
+  }
+  .scrolling-text-container {
+    display: none;
+  }
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .scroll-symbol {
+    width: 1.3rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .intro {
-    margin-top: 12rem;
+    margin-top: 13rem;
+    height: auto;
   }
+
   .bg {
-    right: 4vw;
+        top: -10rem;
+        right: 7rem;
+        width: 12rem;
+        height: 12rem;
+    
   }
+
   .introContent {
-    font-size: 12vw;
-    max-width: 90%;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .scrolling-text-container {
+    display: none;
   }
   .hello {
-    font-size: 6vw;
+    font-size: 2rem;
+  }
+
+  .introtext {
+    font-size: 1.5rem;
+  }
+
+  .introPara {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .scroll-symbol {
+    width: 1rem;
+  }
+}
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsive styles */
+/* @media (max-width: 768px) {
+  .scrolling-text-container {
+    position: relative;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    padding: 10px 0;
+    /* Hide scrolling text on very small screens */
+    
+  /* }
+
+  .scrolling-text {
+    display: block;
+    white-space: normal;
+    text-align: center;
+    animation: none;
+  }
+} */ 
+
+/* @media (max-width: 480px) {
+  .scrolling-text-container {
+    padding: 5px 0;
+  }
+
+  .scrolling-text {
+    font-size: 0.8em;
+  }
+} */
+.contact-sidebar {
+  margin-left: 2rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column; /* Ensures the items stack vertically */
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: #e0dfdf;
+}
+
+.contact-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-sidebar a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #c1b2b2;
+  transition: color 0.3s ease;
+}
+
+.contact-sidebar a:hover {
+  color: #ff3366;
+}
+
+/* For small screens (mobile) */
+@media (max-width: 768px) {
+  .contact-sidebar {
+    flex-direction: row; /* Changes layout to horizontal */
+    justify-content: center;
+    width: 100%;
+    position: static; /* Makes it non-fixed */
+    transform: none;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    display: none;
+  }
+
+  .contact-sidebar ul {
+    flex-direction: row; /* Align the icons horizontally */
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .contact-sidebar li {
+    margin: 0;
   }
 }

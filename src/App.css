@@ -1,5 +1,9 @@
-.App {
+/* General styles for the app */
+.app {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .App-logo {
@@ -13,6 +17,7 @@
   }
 }
 
+/* Header styles */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,17 +27,53 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
+/* Link styles */
 .App-link {
   color: #61dafb;
 }
 
+/* Animation for logo spin */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin);
+  }
+
+  .App-logo {
+    height: 30vmin;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    font-size: calc(6px + 2vmin);
+    padding: 0 10px;
+  }
+
+  .App-logo {
+    height: 25vmin;
+  }
+}
+
+@media (max-width: 360px) {
+  .App-header {
+    font-size: calc(5px + 2vmin);
+  }
+
+  .App-logo {
+    height: 20vmin;
   }
 }
